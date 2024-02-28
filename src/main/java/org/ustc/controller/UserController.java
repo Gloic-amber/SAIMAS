@@ -4,11 +4,12 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ustc.config.JwtConfig;
 import org.ustc.pojo.User;
-import org.ustc.pojo.UserRegisterBO;
+import org.ustc.pojo.UserBO;
 import org.ustc.restful.RestResult;
 import org.ustc.service.UserService;
 import org.ustc.utils.JwtUtils;
@@ -38,12 +39,12 @@ public class UserController {
 
     /**
      * 注册账号，需要新用户名不重复
-     * @param userRegisterBO
+     * @param userBO
      * @return
      */
     @PostMapping("/register")
-    public RestResult<Object> register(UserRegisterBO userRegisterBO){
-        return userService.register(userRegisterBO);
+    public RestResult<Object> register(UserBO userBO){
+        return userService.register(userBO);
     }
 
     /**
@@ -63,4 +64,15 @@ public class UserController {
         }
         return RestResult.fail();
     }
+
+    /**
+     * 修改用户信息，需要jwt
+     * @param userBO
+     * @return 修改结果
+     */
+    @PutMapping("/alter")
+    public RestResult<Object> alter(UserBO userBO){
+        return userService.alter(userBO);
+    }
+
 }

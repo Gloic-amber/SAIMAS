@@ -13,7 +13,7 @@ import lombok.Data;
  */
 
 @Data
-public class UserRegisterBO {
+public class UserBO {
 
     String name;
 
