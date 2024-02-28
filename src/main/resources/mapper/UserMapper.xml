@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace等于mapper接口类的全限定名,这样实现对应 -->
+<mapper namespace="org.ustc.mapper.UserMapper">
+    <insert id="insertUser" parameterType="org.ustc.pojo.User" useGeneratedKeys="true" keyProperty="stuId">
+        insert into stuInfoTable (stu_name, stu_password, stu_username)
+        values (#{stuName}, #{stuPassword}, #{stuUsername})
+    </insert>
+
+    <select id="selectByUserName" parameterType="string" resultType="org.ustc.pojo.User">
+        select * from stuInfoTable
+        where stu_username = #{username}
+    </select>
+
+
+</mapper>

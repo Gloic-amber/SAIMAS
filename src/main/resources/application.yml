@@ -6,7 +6,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      url: jdbc:mysql://192.168.111.128:3306/OverSeaStudy?serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://192.168.111.128:3306/SAIMAS?serverTimezone=Asia/Shanghai
       username: root
       password: 123
       driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,3 +18,19 @@ mybatis:
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
   type-aliases-package: org.ustc.pojo # 配置别名
   mapper-locations: classpath:/mapper/*.xml # mapperxml位置
+
+security:
+#  config:
+#    identity-header: user-id
+#    # 配置需要认证的接口，中间不能加空格
+#    must-auth-url: /blog/console/**
+  # JWT配置
+  jwt:
+    # 密匙KEY
+    key: "ustc-auth"
+    # token在http头中的命名
+    header-name: "token"
+    # 签名发放者
+    issuer: "ustc.cn"
+    # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
+    expiration: 604800
