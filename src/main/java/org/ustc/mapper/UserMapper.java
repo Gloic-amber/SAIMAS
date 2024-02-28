@@ -1,5 +1,6 @@
 package org.ustc.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
@@ -16,7 +17,7 @@ import org.ustc.pojo.User;
  */
 
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User>{
 
     /**
      * 插入新用户信息

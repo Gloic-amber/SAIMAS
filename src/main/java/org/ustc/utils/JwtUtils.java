@@ -76,7 +76,8 @@ public class JwtUtils {
      * @return clz类型对象
      */
     public static <T> T parse(String jwt, Class<T> clz) {
-        JSONObject data = (JSONObject) JWT.of(jwt).getPayload("data");
+        JSONObject data = (JSONObject) JWT.of(jwt).getPayload("id");
         return data.toBean(clz);
     }
+
 }

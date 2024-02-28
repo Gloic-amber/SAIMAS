@@ -1,6 +1,7 @@
 package org.ustc.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.sql.Timestamp;
@@ -16,7 +17,8 @@ import java.sql.Timestamp;
  */
 
 @Data
-public class SelfAssess {
+@TableName("selfAssessTable")
+public class Assess {
 
     @TableId
     Integer assessId;
