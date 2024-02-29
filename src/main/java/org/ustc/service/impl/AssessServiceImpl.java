@@ -13,6 +13,7 @@ import org.ustc.restful.ListVO;
 import org.ustc.restful.RestResult;
 import org.ustc.service.AssessService;
 import org.ustc.utils.AuthUtils;
+import org.ustc.utils.ChatUtils;
 
 import java.sql.Timestamp;
 
@@ -46,8 +47,8 @@ public class AssessServiceImpl implements AssessService {
         assess.setLanguage(assessBO.getLanguage());
         assess.setExperience(assessBO.getExperience());
         assess.setStuId(id);
-        // TODO:3.调用api获得评估结果
-        assess.setAdvice("sdfsdaf");
+        // 3.调用api获得评估结果
+        ChatUtils.chat(assess);
         // 4.插入评估结果并返回
         if(assessMapper.insert(assess) != 1){
             return RestResult.fail("插入失败");
