@@ -1,5 +1,6 @@
 package org.ustc.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -20,7 +21,7 @@ import java.sql.Timestamp;
 @TableName("selfAssessTable")
 public class Assess {
 
-    @TableId
+    @TableId(value = "assess_id", type = IdType.AUTO)
     Integer assessId;
 
     Integer stuId;
