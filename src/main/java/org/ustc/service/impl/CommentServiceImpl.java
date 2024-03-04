@@ -65,6 +65,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
         //转换为dto
         List<CommentDTO> comments = commentPage.getRecords().stream()
                 .map(comment -> BeanUtil.copyProperties(comment, CommentDTO.class)).toList();
+        if(comments==null||comments.isEmpty()){
+            return RestResult.ok();
+        }
         //批量查询,减少数据库消耗，并加入stuUsername
         List<Integer> idList = comments.stream().map(CommentDTO::getStuId).distinct().collect(Collectors.toList());
         List<User> users = userService.query().in("stu_id", idList).list();
