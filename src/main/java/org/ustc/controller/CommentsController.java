@@ -40,10 +40,10 @@ public class CommentsController {
      * 获取一所学校的全体评论，应该在前端学校详情页展示
      */
     @GetMapping("/get")
-    public RestResult showComments(@RequestParam("schoolId") Integer schoolId,
+    public RestResult showComments(@RequestParam("programId") Integer programId,
                                    @RequestParam(value = "page",defaultValue="1") Integer page,
                                    @RequestParam(value = "size", defaultValue = "10") Integer size){
-        return commentService.showComments(schoolId,page,size);
+        return commentService.showComments(programId,page,size);
     }
     /**
      * 修改评论

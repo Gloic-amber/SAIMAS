@@ -14,7 +14,7 @@
             <option name="ignoreFieldPrefix" value="" />
             <option name="ignoreFieldSuffix" value="" />
             <option name="ignoreTablePrefix" value="" />
-            <option name="ignoreTableSuffix" value="table" />
+            <option name="ignoreTableSuffix" value="_table" />
             <option name="moduleName" value="SAIMAS" />
             <option name="modulePath" value="$PROJECT_DIR$" />
             <option name="moduleUIInfoList">
@@ -67,24 +67,16 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Universityinfo" />
-                  <option name="tableName" value="universityinfotable" />
+                  <option name="className" value="ProgramInfo" />
+                  <option name="tableName" value="program_info_table" />
                 </TableUIInfo>
                 <TableUIInfo>
-                  <option name="className" value="Detailinfo" />
-                  <option name="tableName" value="detailinfotable" />
+                  <option name="className" value="CollegeInfo" />
+                  <option name="tableName" value="college_info_table" />
                 </TableUIInfo>
                 <TableUIInfo>
-                  <option name="className" value="Comment" />
-                  <option name="tableName" value="commenttable" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="Collect" />
-                  <option name="tableName" value="collect" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="Apply" />
-                  <option name="tableName" value="applytable" />
+                  <option name="className" value="CollegeImgs" />
+                  <option name="tableName" value="college_imgs_table" />
                 </TableUIInfo>
               </list>
             </option>

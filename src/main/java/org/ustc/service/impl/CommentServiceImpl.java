@@ -59,12 +59,12 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
     }
 
     @Override
-    public RestResult showComments(Integer schoolId, Integer page, Integer size) {
+    public RestResult showComments(Integer programId, Integer page, Integer size) {
         //评论分页查询
-        Page<Comment> commentPage = query().eq("school_id", schoolId).page(new Page<>(page, size));
+        Page<Comment> commentPage = query().eq("program_id", programId).page(new Page<>(page, size));
         //转换为dto
         List<CommentDTO> comments = commentPage.getRecords().stream()
-                .map(comment -> BeanUtil.copyProperties(comment, CommentDTO.class)).toList();
+                .map(comment -> BeanUtil.copyProperties(comment, CommentDTO.class)).collect(Collectors.toList());
         if(comments==null||comments.isEmpty()){
             return RestResult.ok();
         }
