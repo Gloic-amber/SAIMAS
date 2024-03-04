@@ -1,13 +1,17 @@
 package org.ustc.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.ustc.mapper.CommentMapper;
 import org.ustc.mapper.UserMapper;
+import org.ustc.pojo.Comment;
 import org.ustc.pojo.User;
 import org.ustc.pojo.UserBO;
 import org.ustc.restful.RestResult;
+import org.ustc.service.CommentService;
 import org.ustc.service.UserService;
 import org.ustc.utils.AuthUtils;
 
@@ -23,7 +27,8 @@ import org.ustc.utils.AuthUtils;
 
 @Slf4j
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User>
+        implements UserService {
 
     @Resource
     private UserMapper userMapper;

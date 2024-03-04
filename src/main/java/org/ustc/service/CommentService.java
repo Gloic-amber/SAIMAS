@@ -2,6 +2,7 @@ package org.ustc.service;
 
 import org.ustc.pojo.Comment;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.ustc.restful.RestResult;
 
 /**
 * @author 孙晗斌
@@ -10,4 +11,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface CommentService extends IService<Comment> {
 
+    RestResult addComment(Comment comment);
+
+    RestResult delComment(Integer commentId);
+
+    RestResult showComments(Integer schoolId, Integer page, Integer size);
+
+
+
+    RestResult updateComment(Comment comment);
 }

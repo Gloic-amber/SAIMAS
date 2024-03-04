@@ -1,5 +1,7 @@
 package org.ustc.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
+import org.ustc.pojo.Comment;
 import org.ustc.pojo.User;
 import org.ustc.pojo.UserBO;
 import org.ustc.restful.RestResult;
@@ -13,7 +15,7 @@ import org.ustc.restful.RestResult;
  * @version 1.0
  * @create 2024/2/28
  */
-public interface UserService {
+public interface UserService extends IService<User> {
 
     /**
      * 用户注册
