@@ -14,6 +14,7 @@ import lombok.Data;
 @TableName(value ="detailinfotable")
 @Data
 public class Detailinfo implements Serializable {
+    @TableId(type = IdType.AUTO)
     private Integer schoolId;
 
     private String require1;

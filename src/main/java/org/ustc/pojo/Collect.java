@@ -13,6 +13,7 @@ import lombok.Data;
 @TableName(value ="collect")
 @Data
 public class Collect implements Serializable {
+    @TableId(type = IdType.AUTO)
     private Integer stuId;
 
     private Integer schoolId;

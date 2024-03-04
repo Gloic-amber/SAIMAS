@@ -4,7 +4,7 @@ import baidumodel.entity.chat.*;
 import baidumodel.service.BaiduService;
 import baidumodel.util.TokenUtil;
 import cn.hutool.json.JSONUtil;
-import com.zhipu.oapi.ClientV4;
+
 import org.ustc.pojo.Assess;
 
 import java.util.Collections;

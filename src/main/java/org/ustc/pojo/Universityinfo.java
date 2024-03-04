@@ -13,6 +13,7 @@ import lombok.Data;
 @TableName(value ="universityinfotable")
 @Data
 public class Universityinfo implements Serializable {
+    @TableId(type = IdType.AUTO)
     private Integer schoolId;
 
     private String schoolName;

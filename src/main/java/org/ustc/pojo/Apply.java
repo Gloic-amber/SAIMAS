@@ -13,6 +13,7 @@ import lombok.Data;
 @TableName(value ="applytable")
 @Data
 public class Apply implements Serializable {
+    @TableId(type = IdType.AUTO)
     private Integer applyId;
 
     private Integer stuId;

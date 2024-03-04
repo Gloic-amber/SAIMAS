@@ -14,6 +14,7 @@ import lombok.Data;
 @TableName(value ="commenttable")
 @Data
 public class Comment implements Serializable {
+    @TableId(type = IdType.AUTO)
     private Integer commentId;
 
     private Integer schoolId;
