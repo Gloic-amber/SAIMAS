@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ustc.mapper.CollegeInfoMapper">
+
+    <resultMap id="BaseResultMap" type="org.ustc.pojo.CollegeInfo">
+            <id property="collegeId" column="college_id" jdbcType="INTEGER"/>
+            <result property="collegeName" column="college_name" jdbcType="VARCHAR"/>
+            <result property="region" column="region" jdbcType="VARCHAR"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="qsrank" column="qsrank" jdbcType="INTEGER"/>
+            <result property="rkrank" column="rkrank" jdbcType="INTEGER"/>
+            <result property="logoUrl" column="logo_url" jdbcType="VARCHAR"/>
+            <result property="siteUrl" column="site_url" jdbcType="VARCHAR"/>
+            <result property="introduction" column="introduction" jdbcType="VARCHAR"/>
+            <result property="avgScore" column="avg_score" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        college_id,college_name,region,
+        city,qsrank,rkrank,
+        logo_url,site_url,introduction,
+        avg_score
+    </sql>
+</mapper>

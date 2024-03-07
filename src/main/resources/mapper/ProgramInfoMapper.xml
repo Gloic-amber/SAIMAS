@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ustc.mapper.ProgramInfoMapper">
+
+    <resultMap id="BaseResultMap" type="org.ustc.pojo.ProgramInfo">
+            <id property="programId" column="program_id" jdbcType="INTEGER"/>
+            <result property="collegeId" column="college_id" jdbcType="INTEGER"/>
+            <result property="collegeName" column="college_name" jdbcType="VARCHAR"/>
+            <result property="academyName" column="academy_name" jdbcType="VARCHAR"/>
+            <result property="majorName" column="major_name" jdbcType="VARCHAR"/>
+            <result property="introduction" column="introduction" jdbcType="VARCHAR"/>
+            <result property="requirement" column="requirement" jdbcType="VARCHAR"/>
+            <result property="proc" column="proc" jdbcType="VARCHAR"/>
+            <result property="applicationDocuments" column="application_documents" jdbcType="VARCHAR"/>
+            <result property="deadline" column="deadline" jdbcType="TIMESTAMP"/>
+            <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+            <result property="mail" column="mail" jdbcType="VARCHAR"/>
+            <result property="cost" column="cost" jdbcType="DECIMAL"/>
+            <result property="avgScore" column="avg_score" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        program_id,college_id,college_name,
+        academy_name,major_name,introduction,
+        requirement,proc,application_documents,
+        deadline,telephone,mail,
+        cost,avg_score
+    </sql>
+</mapper>
