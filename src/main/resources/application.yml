@@ -8,7 +8,7 @@ spring:
     druid:
       url: jdbc:mysql://127.0.0.1:3306/overseas_study
       username: root
-      password: A161001a
+      password: root
       driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
